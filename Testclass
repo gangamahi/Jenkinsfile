@@ -1,0 +1,28 @@
+//Test Class
+@isTest
+public class BankAccountTest {
+        //we need to have a starting point for execution
+    public testMethod static void main(){//this is the starting point of execution
+        //how many objects ==> 0
+         BankAccount.getCount();//before any object is created
+        BankAccount ba_obj1 = new BankAccount();
+        ba_obj1.setValues(123,'asdf',6789);//9 tm to 35 in bc
+        BankAccount.getCount();
+        ba_obj1.deposit(2345);
+        ba_obj1.withdraw(25);
+        ba_obj1.getValues();
+
+        //how many objects created ==> 1
+        BankAccount ba_obj2 = new BankAccount();
+        BankAccount ba_obj3 = new BankAccount();
+        BankAccount.getCount();
+        //how many objects created ==> 3
+        BankAccount ba_obj4 = new BankAccount();
+        BankAccount.getCount();
+        //how many objects created ==> 4
+        BankAccount ba_obj5 = new BankAccount();
+        BankAccount.getCount();
+        //how many objects created ==> 5
+           
+    }
+}
